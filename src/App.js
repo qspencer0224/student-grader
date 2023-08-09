@@ -1,23 +1,64 @@
-import logo from './logo.svg';
+import { useState } from 'react';
+// 
 import './App.css';
+import Student from './components/Student';
+import studentList from './models/studentList'
+import Score from './components/Score';
+
+
 
 function App() {
+
+  // state
+  const [studentData, setStudentData] = useState(studentList)
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* map the array of student data */}
+      {studentData.map((pupil) => {
+        console.log(pupil);
+
+        return (
+          <div id='wrapper'>
+          {/* component 1 */}
+          <Student 
+            key={pupil.id}
+            img={pupil.img}
+            name={pupil.name}
+            bio={pupil.bio}
+            // scores={pupil.scores}
+            // scores={pupil.scores.map((pupil) => {
+            //   return (
+            //     <>
+            //     <li key={pupil.id}>{pupil.date}</li>
+            //     <li key={pupil.id}>{pupil.score}</li>
+            //     </>
+            //   )
+            // })}
+      />
+      {/* component 2 */}
+      <div className='scoreWrapper'>
+      <Score
+      key={pupil.key}
+      scores={pupil.scores.map((pupil) => {
+        return (
+          <ul className='scoreBox'>
+            <li className='grade'>GRADE: </li>
+            <li>{pupil.date}</li>
+            <li className='pupilScore'>{pupil.score}</li>
+          </ul>
+        )
+      })}
+      />
+      </div>
+      </div>
+
+        )
+      })}
+      
+
+      
     </div>
   );
 }

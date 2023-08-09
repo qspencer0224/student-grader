@@ -1,38 +1,79 @@
+
+body{
+  background-color: #fffef8;
+}
 .App {
   text-align: center;
+  padding: 40px;
+}
+/* wrapper */
+#wrapper{
+  /* border: solid green; */
+  border-radius: 20px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  background-color: #faf9f8;
+  margin-top: 20px;
+  width: 410px;
+  height: 750px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* STUDENT */
+#studentBox {
+  /* border: solid rgb(255, 208, 0); */
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  background-color: #fac535;
+  height: 350px;
+  margin-bottom: 100px;
+}
+.profileImg {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  height: auto;
+  width: 200px;
+  /* border: solid orange; */
+  border-radius: 50%;
+  margin-top: 25px;
+}
+.name {
+  font-size: 25px;
+  font-weight: bold;
+  margin: 15px 0 25px 0;
+}
+.bio {
+  /* border: solid lime; */
+  border-radius: 8px;
+  padding: 20px 15px 18px 15px;
+  width: 360px;
+  margin: 30px 0 30px 23px;
+  /* margin-left: 23px; */
+  background-color: #ffff;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* SCORE */
+.scoreWrapper {
+  /* border: solid crimson; */
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-top: 150px;
 }
-
-.App-link {
-  color: #61dafb;
+.scoreBox{
+  /* border: solid orange; */
+  border-style: none;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  height: 40px;
+  width: 300px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  margin-top: 12px;
+  background-color: #fff;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.grade {
+  opacity: 50%;
+}
+.pupilScore {
+  font-weight: bold;
 }
